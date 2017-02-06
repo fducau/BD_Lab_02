@@ -27,12 +27,12 @@ for line in sys.stdin:
     entry = line.split(",")
     
     # Set row, column, and value for this entry
-    #row = int(entry[1])
-    #col = int(entry[2])
-    #value = float(entry[3])
-    row = 0
-    col = 0
-    value = 1.0
+    row = int(entry[1])
+    col = int(entry[2])
+    value = float(entry[3])
+    #row = 0
+    #col = 0
+    #value = 1.0
     #If this is an entry in matrix A...
     if (entry[0] == "A"):
         for i in range(p):
