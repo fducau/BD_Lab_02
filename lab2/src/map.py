@@ -27,15 +27,17 @@ for line in sys.stdin:
     entry = line.split(",")
     
     # Set row, column, and value for this entry
-    row = int(entry[1])
-    col = int(entry[2])
-    value = float(entry[3])
-
+    #row = int(entry[1])
+    #col = int(entry[2])
+    #value = float(entry[3])
+    row = 0
+    col = 0
+    value = 1.0
     #If this is an entry in matrix A...
     if (entry[0] == "A"):
         for i in range(p):
-            print '1 1\tA 1 1'.format(row, i, col, value)
-            #print '{} {}\tA {} {}'.format(row, i, col, value)
+            #print '1 1\tA 1 1'.format(row, i, col, value)
+            print '{} {}\tA {} {}'.format(row, i, col, value)
             #print '%s %s\tA %s %s' % (row, i, col, value)
         #Generate the necessary key-value pairs
         #(your code goes here)
@@ -43,8 +45,8 @@ for line in sys.stdin:
     #Otherwise, if this is an entry in matrix B...
     else:
         for i in range(m):
-            print '1 1\tB 1 1'.format(row, i, col, value)
-            #print '{} {}\tB {} {}'.format(i, col, row, value)
+            #print '1 1\tB 1 1'.format(row, i, col, value)
+            print '{} {}\tB {} {}'.format(i, col, row, value)
             #print '%s %s\tB %s %s' % (i, col, row, value)
 
         
