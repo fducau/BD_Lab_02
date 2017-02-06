@@ -1,58 +1,46 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 # map function for matrix multiply
-#Input file assumed to have lines of the form "A,i,j,x", where i is the row index, j is the column index, and x is the value in row i, column j of A. Entries of A are followed by lines of the form "B,i,j,x" for the matrix B. 
-#It is assumed that the matrix dimensions are such that the product A*B exists. 
+# Input file assumed to have lines of the form "A,i,j,x",
+# where i is the row index, j is the column index, and x is the
+# value in row i, column j of A. Entries of A are followed by
+# lines of the form "B,i,j,x" for the matrix B.
+# It is assumed that the matrix dimensions are such that
+# the product A*B exists.
 
-#Input arguments:
-#m should be set to the number of rows in A, p should be set to the number of columns in B.
- 
+# Input arguments:
+# m should be set to the number of rows in A, p should be set to
+# the number of columns in B.
+
 import sys
-import string
-#import numpy
+# import string
+# import numpy
 
-#number of rows in A
-m = int(sys.argv[1]) 
+# number of rows in A
+m = int(sys.argv[1])
 
-#number of columns in B
+# number of columns in B
 p = int(sys.argv[2])
 
 
 # input comes from STDIN (stream data that goes to the program)
 for line in sys.stdin:
-    
-    #Remove leading and trailing whitespace
+    # Remove leading and trailing whitespace
     line = line.strip()
 
-    #Split line into array of entry data
+    # Split line into array of entry data
     entry = line.split(",")
-    
+
     # Set row, column, and value for this entry
     row = int(entry[1])
     col = int(entry[2])
     value = float(entry[3])
-    #row = 0
-    #col = 0
-    #value = 1.0
-    #If this is an entry in matrix A...
+
+    # If this is an entry in matrix A...
     if (entry[0] == "A"):
         for i in range(p):
-            #print '1 1\tA 1 1'.format(row, i, col, value)
             print '{} {}\tA {} {}'.format(row, i, col, value)
-            #print '%s %s\tA %s %s' % (row, i, col, value)
-        #Generate the necessary key-value pairs
-        #(your code goes here)
 
-    #Otherwise, if this is an entry in matrix B...
+    # Otherwise, if this is an entry in matrix B...
     else:
         for i in range(m):
-            #print '1 1\tB 1 1'.format(row, i, col, value)
             print '{} {}\tB {} {}'.format(i, col, row, value)
-            #print '%s %s\tB %s %s' % (i, col, row, value)
-
-        
-        #Generate the necessary key-value pairs
-        #(your code goes here)
-        
-
-    
-        
