@@ -6,5 +6,6 @@
 
 . /etc/profile.d/modules.sh
 module load python/gnu/2.7.11
-map.py 50 50
+python src/map.py 2 3
+#map.py 50 50
 
