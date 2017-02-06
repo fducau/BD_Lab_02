@@ -75,7 +75,7 @@ for line in sys.stdin:
 result = 0.0
 for i in range(n):
     result += arow[i] * bcol[i]
-print 'C,{},{},{}'.format(row, col, result)
+print 'C,{},{},{}'.format(currentkeys[0], currentkeys[1], result)
 
 
 
