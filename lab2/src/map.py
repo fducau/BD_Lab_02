@@ -8,7 +8,7 @@
  
 import sys
 import string
-import numpy
+#import numpy
 
 #number of rows in A
 m = int(sys.argv[1]) 
