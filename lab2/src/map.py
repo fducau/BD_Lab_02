@@ -34,16 +34,18 @@ for line in sys.stdin:
     #If this is an entry in matrix A...
     if (entry[0] == "A"):
         for i in range(p):
+            print '1 1\tA 1 1'.format(row, i, col, value)
             #print '{} {}\tA {} {}'.format(row, i, col, value)
-            print '%s %s\tA %s %s' % (row, i, col, value)
+            #print '%s %s\tA %s %s' % (row, i, col, value)
         #Generate the necessary key-value pairs
         #(your code goes here)
 
     #Otherwise, if this is an entry in matrix B...
     else:
         for i in range(m):
+            print '1 1\tB 1 1'.format(row, i, col, value)
             #print '{} {}\tB {} {}'.format(i, col, row, value)
-            print '%s %s\tB %s %s' % (i, col, row, value)
+            #print '%s %s\tB %s %s' % (i, col, row, value)
 
         
         #Generate the necessary key-value pairs

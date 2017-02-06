@@ -73,6 +73,7 @@ for line in sys.stdin:
 
 #Compute/output result for the last key (your code goes here)
 result = 0.0
+currentkeys = currentkey.split(' ')
 for i in range(n):
     result += arow[i] * bcol[i]
 print 'C,{},{},{}'.format(currentkeys[0], currentkeys[1], result)
