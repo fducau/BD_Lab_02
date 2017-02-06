@@ -6,5 +6,5 @@
 
 . /etc/profile.d/modules.sh
 module load python/gnu/2.7.11
-src/reduce.py 2000
+reduce.py 2000
 
